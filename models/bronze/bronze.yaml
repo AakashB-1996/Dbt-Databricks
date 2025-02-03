@@ -1,0 +1,11 @@
+version: 2
+
+
+models:
+  - name: bronze_churn
+    columns:
+      - name: geography
+        tests:
+          - accepted_values:
+              values: ['France','Spain','Germany']
+          ##There is also relationship tests that can be used if you want
