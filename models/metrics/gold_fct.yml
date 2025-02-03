@@ -27,7 +27,7 @@ semantic_models:
 metrics:
 #SIMPLE TYPE METRICS
   - name: "balance_total_spain"
-    description: "Sum of balance"
+    description: "Sum of balance of Spain alone"
     type: simple
     label: "balance_total_spain"
     type_params:
