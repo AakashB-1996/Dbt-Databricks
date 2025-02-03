@@ -1,0 +1,36 @@
+semantic_models:
+  - name: gold_daily_balance
+    description: |
+      Balance and Salary per Customer
+    defaults:
+      agg_time_dimension: date_of_business
+    model: ref('gold_churn_daily')
+    entities:
+      - name: customer_id
+        type: primary
+    dimensions: # dimensions are qualitative values such as names, dates, or geographical data. They provide context to metrics and allow "metric by group" data slicing.
+      - name: country
+        type: categorical
+      - name: date_of_business
+        type: time
+        type_params:
+          time_granularity: day
+    # Newly added      
+    measures:   
+      - name: balance_total_daily
+        description: The total amount for each order including taxes.
+        agg: sum
+        expr: balance
+      - name: customer_count_daily
+        expr: 1
+        agg: sum
+metrics:
+#SIMPLE TYPE METRICS
+  - name: "balance_total_spain"
+    description: "Sum of balance"
+    type: simple
+    label: "balance_total"
+    type_params:
+      measure: balance_total_daily
+    filter: |
+      {{ Dimension('customer_id__country') }}  = 'Spain'

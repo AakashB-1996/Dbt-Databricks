@@ -1,0 +1,13 @@
+version: 2
+
+exposures:
+
+  - name: daily_gold_churn
+    label: "Churn by the day"
+    type: application
+    description: "This table provides insights into final churn. we can even add mertics if needed"
+    depends_on:
+      - ref('silver_churn')  ##Final table to gold
+    owner:
+      name: "Aakash"
+      email: "aak@example.com"

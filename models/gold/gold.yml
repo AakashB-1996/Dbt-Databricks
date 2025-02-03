@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  ##This will make the following model defined as a table but the rest by default unless mentioned here, will be a view
+  - name: gold_churn_daily
+    config: 
+      materialized: table
