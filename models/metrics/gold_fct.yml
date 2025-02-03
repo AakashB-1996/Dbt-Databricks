@@ -29,8 +29,14 @@ metrics:
   - name: "balance_total_spain"
     description: "Sum of balance"
     type: simple
-    label: "balance_total"
+    label: "balance_total_spain"
     type_params:
       measure: balance_total_daily
     filter: |
       {{ Dimension('customer_id__country') }}  = 'Spain'
+  - name: "balance_total"
+    description: "Sum of balance"
+    type: simple
+    label: "balance_total"
+    type_params:
+      measure: balance_total_daily
