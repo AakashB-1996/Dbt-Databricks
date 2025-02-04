@@ -40,3 +40,16 @@ metrics:
     label: "balance_total"
     type_params:
       measure: balance_total_daily
+saved_queries:
+  - name: balance_metrics
+    label: "balance_country" 
+    description: Relevant balance metrics
+    query_params:
+      metrics:
+        - balance_total
+      group_by:
+        - Dimension('customer_id__country')
+    exports:
+      - name: balance_metrics
+        config:
+          export_as: table
