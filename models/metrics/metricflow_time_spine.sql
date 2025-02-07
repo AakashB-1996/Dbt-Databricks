@@ -1,9 +1,8 @@
 -- metricflow_time_spine.sql
---for BQ adapters use "DATE('01/01/2000','mm/dd/yyyy')"
 with days as (
     {{dbt_utils.date_spine('day'
     , "to_date('01/01/2000','mm/dd/yyyy')"
-    , "to_date('01/01/2027','mm/dd/yyyy')"
+    , "to_date('01/01/2028','mm/dd/yyyy')"
     )
     }}
 ),
