@@ -15,8 +15,8 @@ semantic_models:
         type: time
         type_params:
           time_granularity: day
-    # Newly added      
-    measures:   
+    # Newly added
+    measures:
       - name: balance_total_daily
         description: The total amount for each order including taxes.
         agg: sum
@@ -25,7 +25,7 @@ semantic_models:
         expr: 1
         agg: sum
 metrics:
-#SIMPLE TYPE METRICS
+  #SIMPLE TYPE METRICS
   - name: "balance_total_spain"
     description: "Sum of balance of Spain alone"
     type: simple
@@ -42,7 +42,7 @@ metrics:
       measure: balance_total_daily
 saved_queries:
   - name: balance_metrics
-    label: "balance_country" 
+    label: "balance_country"
     description: Relevant balance metrics
     query_params:
       metrics:
