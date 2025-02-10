@@ -14,4 +14,4 @@ unit_tests:
         - {custID: 1, Status: Stuggle}
         - {custID: 2, Status: Not bad}
         - {custID: 3, Status: Not bad}
-        - {custID: 4, Status: Stuggle} ##Should fail
+        - {custID: 4, Status: Perfect} ##Should fail

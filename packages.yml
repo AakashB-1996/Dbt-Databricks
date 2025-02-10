@@ -1,4 +1,6 @@
 packages:
   - package: dbt-labs/dbt_utils
     version: [">=0.8.0", "<2.0.0"]
+  - package: EqualExperts/dbt_unit_testing
+    version: 0.4.12
   
