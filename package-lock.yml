@@ -2,5 +2,9 @@ packages:
   - package: dbt-labs/dbt_utils
     version: 1.3.0
   - package: EqualExperts/dbt_unit_testing
-    version: 0.4.12
-sha1_hash: 6144c3cc143c87768aee779c9364c427458fc284
+    version: 0.4.20
+  - package: calogica/dbt_expectations
+    version: 0.10.4
+  - package: calogica/dbt_date
+    version: 0.10.1
+sha1_hash: 73ac22abfc77c56795add5ce7450e54926aad109
